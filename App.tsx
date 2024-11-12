@@ -3,7 +3,8 @@ import { NavigationContainer } from '@react-navigation/native'
 import { StatusBar } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
-import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { QueryClientProvider } from '@tanstack/react-query'
+import { queryClient } from '@api/queryClient'
 
 const Root = () => {
   return (
@@ -13,13 +14,15 @@ const Root = () => {
   )
 }
 
-const queryClient = new QueryClient()
-
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaProvider>
-        <StatusBar backgroundColor="transparent" translucent />
+        <StatusBar
+          backgroundColor="transparent"
+          translucent
+          barStyle={'dark-content'}
+        />
         <GestureHandlerRootView>
           <NavigationContainer>
             <Root />
