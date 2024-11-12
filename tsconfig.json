@@ -12,7 +12,8 @@
       "@screens/*": ["screens/*"],
       "@screens": ["screens/index"],
       "@hooks": ["hooks/*"],
-      "@api/*": ["api/*"]
+      "@api/*": ["api/*"],
+      "@icons": ["assets/icons/*"]
     }
   }
 }

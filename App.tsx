@@ -1,10 +1,11 @@
 import RootRouter from '@screens/RootRouter'
 import { NavigationContainer } from '@react-navigation/native'
-import { StatusBar } from 'react-native'
 import { GestureHandlerRootView } from 'react-native-gesture-handler'
 import { SafeAreaProvider } from 'react-native-safe-area-context'
 import { QueryClientProvider } from '@tanstack/react-query'
 import { queryClient } from '@api/queryClient'
+import { SystemBars } from 'react-native-edge-to-edge'
+import './index.css'
 
 const Root = () => {
   return (
@@ -18,11 +19,7 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <SafeAreaProvider>
-        <StatusBar
-          backgroundColor="transparent"
-          translucent
-          barStyle={'dark-content'}
-        />
+        <SystemBars style="dark" />
         <GestureHandlerRootView>
           <NavigationContainer>
             <Root />

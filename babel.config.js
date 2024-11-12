@@ -9,6 +9,7 @@ module.exports = {
           '@hooks': './src/hooks',
           '@screens': './src/screens',
           '@api': './src/api',
+          '@icons': './src/assets/icons',
         },
       },
     ],
